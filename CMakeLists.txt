@@ -12,8 +12,9 @@ add_definitions(${PCL_DEFINITIONS})
 
 include_directories(${CMAKE_HOME_DIRECTORY}/include)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES src/main.cpp)
+
+add_executable(pcl_extract_dominant_plane ${SOURCE_FILES})
 
 target_link_libraries(pcl_extract_dominant_plane ${PCL_LIBRARIES})
 
-add_executable(pcl_extract_dominant_plane ${SOURCE_FILES})
